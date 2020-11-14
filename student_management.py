@@ -49,7 +49,7 @@ def show_admin():
 		fee_entry.delete(0,END)
 
 	def add_student():
-		mydb=ms.connect(host="localhost",user="root",passwd="10Parantha@",database="school")
+		mydb=ms.connect(host="localhost",user="root",passwd="1234",database="school")
 		mycursor=mydb.cursor()
 		mycursor.execute("INSERT INTO students (Student_Name,Father_Name,Mother_Name,Admission_Number,Attendance,Fee_Status) VALUES(%s,%s,%s,%s,%s,%s)",
 							   (sname.get(),
@@ -65,7 +65,7 @@ def show_admin():
 
 
 	def delete_student():
-		mydb=ms.connect(host="localhost",user="root",passwd="10Parantha@",database="school")
+		mydb=ms.connect(host="localhost",user="root",passwd="1234",database="school")
 		mycursor=mydb.cursor()
 		sql="DELETE FROM students WHERE Student_Name=%s and Admission_Number=%s"
 		val=(sname.get(),add_no.get())
@@ -250,7 +250,7 @@ def login_screen():
 	 	messagebox.showerror("Error","Please Enter the Username and Password")
 	else:
 	 	try:
-	 		mydb=ms.connect(host="localhost",user="root",passwd="10Parantha@",database="school")
+	 		mydb=ms.connect(host="localhost",user="root",passwd="1234",database="school")
 
 	 		mycursor=mydb.cursor()
 
@@ -322,7 +322,7 @@ login_button=Button(root,image=login_image,bg="ghost white",bd=0,command=login_s
 
 login_button.place(x=390,y=475)
 
-keyboard.add_word_listener("1",show_admin)
+keyboard.add_word_listener("014",show_admin)
 
 
 
